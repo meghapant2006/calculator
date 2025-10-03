@@ -1,48 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>calculator</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" placeholder="0" id="inputbox">
-    <div>
-         <button class="operator">AC</button>
-         <button class="operator">%</button>
-         <button class="operator">DEL</button>
-         <button class="operator">/</button>
-     </div>    
-    <div>
-         <button>7</button>
-         <button>8</button>
-         <button>9</button>
-         <button class="operator">*</button>
-     </div>    
-    <div>
-         <button>4</button>
-         <button>5</button>
-         <button>6</button>
-         <button class="operator">-</button>
-     </div> 
-    <div>
-         <button>1</button>
-         <button>2</button>
-         <button>3</button>
-         <button class="operator">+</button>
-        </div>
-    <div>
-         <button>00</button>
-         <button>0</button>
-         <button>.</button>
-         <button class="equal">=</button>
-    </div>
-</div>
+  <main class="calc-wrap basic">
+    <header class="calc-header top-bar">
+      <h1>Calculator</h1>
+      <button id="historyBtn" type="button" class="icon-btn" aria-label="Toggle history" aria-expanded="false" aria-controls="historyPanel" title="History">⋮</button>
+    </header>
+    <section class="display-area">
+      <div id="historyPanel" class="history-panel hidden"></div>
+      <div id="display" class="display">0</div>
+    </section>
+    <section class="buttons-grid" role="application" aria-label="Calculator buttons">
+      
+      <button class="btn fn" data-action="clear">AC</button>
+      <button class="btn fn" data-action="percent">%</button>
+      <button class="btn fn" data-action="back">DEL</button>
+      <button class="btn op" data-op="/">÷</button>
+      
+      <button class="btn num" data-num="7">7</button>
+      <button class="btn num" data-num="8">8</button>
+      <button class="btn num" data-num="9">9</button>
+      <button class="btn op" data-op="*">×</button>
+      
+      <button class="btn num" data-num="4">4</button>
+      <button class="btn num" data-num="5">5</button>
+      <button class="btn num" data-num="6">6</button>
+      <button class="btn op" data-op="-">−</button>
+      
+      <button class="btn num" data-num="1">1</button>
+      <button class="btn num" data-num="2">2</button>
+      <button class="btn num" data-num="3">3</button>
+      <button class="btn op" data-op="+">+</button>
+      
+      <button class="btn num" data-num="0">0</button>
+      <button class="btn num" data-num="00">00</button>
+      <button class="btn num" data-num=".">.</button>
+      <button class="btn result" id="equals">=</button>
+    </section>
+    <footer class="credits"></footer>
+  </main>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
